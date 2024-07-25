@@ -31,7 +31,7 @@ const Header = () => {
                     </div>
                     <ul
                         tabIndex={0}
-                        className="menu menu-sm dropdown-content  rounded-box z-[1] mt-3 w-52 p-2 shadow  bg-gray-300">
+                        className="menu menu-sm dropdown-content workSense_font  rounded-box z-[1] mt-3 w-52 p-2 shadow  bg-gray-300">
                         {links} 
 
                     </ul>
@@ -39,15 +39,16 @@ const Header = () => {
                 <a className="btn btn-ghost text-xl font-bold">Book Vibe</a>
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1">
+                <ul className="menu menu-horizontal px-1 workSense_font">
                     {links}
                 </ul>
             </div>
             <div className="navbar-end space-x-4">
-                <a className="btn bg-green-500 text-white">Sign In</a>
-                <a className="btn text-white bg-teal-300">Sign Up </a>
+                <a className="btn bg-[#23BE0A] workSense_font text-white">Sign In</a>
+                <a className="btn text-white workSense_font bg-[#59C6D2]">Sign Up </a>
             </div>
         </div>
+        
     );
 };
 

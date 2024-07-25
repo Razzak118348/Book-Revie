@@ -24,7 +24,9 @@ errorElement:<Error></Error>,
 children:[
   {
     path:'/',
-    element:<Home></Home>
+    element:<Home></Home>,
+    loader: ()=>fetch('../public/Data.json'),
+    
   },
   {
     path:'/listedBook',
