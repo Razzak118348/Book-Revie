@@ -14,6 +14,7 @@ import ListedBook from './Components/ListedBook/ListedBook';
 import Recomanded from './Components/Recomanded/Recomanded';
 import FamousWriter from './Components/FamousWriter/FamousWriter';
 import PageToRead from './Components/PageToRead/PageToRead';
+import BookDetails from './Components/BookDetails/BookDetails';
 
 
 const router= createBrowserRouter([
@@ -27,6 +28,11 @@ children:[
     element:<Home></Home>,
     loader: ()=>fetch('../public/Data.json'),
     
+  },
+  {
+path:'/Singlebook/:id',
+element:<BookDetails></BookDetails>,
+loader:()=>fetch('../public/Data.json')
   },
   {
     path:'/listedBook',

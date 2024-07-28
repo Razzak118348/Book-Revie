@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import SingleBook from "../SingleBook/SingleBook";
 
 
@@ -19,12 +19,16 @@ const Home = () => {
                         <div >
                             <h1 className="text-6xl font-bold Playfair_font">Books to freshen <br /> up your bookshelf</h1>
                             
-                            <button className="btn bg-[#23BE0A] text-white workSense_font mt-12">View The List</button>
+                          <Link to={'/listedBook'}>   <button className="btn bg-[#23BE0A] text-white workSense_font mt-12">View The List</button></Link>
                         </div>
                     </div>
                 </div>
           
-            <div className="grid grid-cols-3 gap-16 mt-10">
+          <div className="text-center">
+          <h2 className="text-5xl font-bold Playfair_font mt-16">Books</h2>
+          </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 my-10">
+               
                 {
                     books.map(book => <SingleBook key={book.bookId} book={book}></SingleBook>)
                 }

@@ -1,18 +1,23 @@
 import { FaRegStar } from "react-icons/fa";
 import PropTypes from "prop-types";
+import BookDetails from "../BookDetails/BookDetails";
+import { Link } from "react-router-dom";
 
 
 
 const SingleBook = ({ book }) => {
-    console.log(book);
-    const { image, bookName, tags, author, category, rating } = book;
-    console.log(tags, category, rating);
+ 
+    const {bookId, image, bookName, tags, author, category, rating } = book;
+
+   
+   
     return (
-        <div className="m-0 p-0 rounded-xl border-2">
+  <Link to={`/SingleBook/${bookId}`}>
+        <div  className="m-0 p-0 rounded-xl border-2 ">
             <div className="hero ">
                 <div className=" flex flex-col">
                     <div className="bg-base-300 p-6 rounded-lg my-5">
-                        <img src={image} className="w-52 rounded-lg shadow-2xl h-52" />
+                        <img src={image} className="w-52 rounded-lg shadow-2xl h-52 " />
                     </div>
 
                     <div className="flex justify-between my-2 p-0 workSense_font ">
@@ -37,6 +42,8 @@ const SingleBook = ({ book }) => {
                <div className="flex space-x-1"> <p>{rating} </p><FaRegStar></FaRegStar></div>
             </div>
         </div>
+  </Link>
+
     );
 };
 
