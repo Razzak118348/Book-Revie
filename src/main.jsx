@@ -15,8 +15,8 @@ import Recomanded from './Components/Recomanded/Recomanded';
 import FamousWriter from './Components/FamousWriter/FamousWriter';
 import PageToRead from './Components/PageToRead/PageToRead';
 import BookDetails from './Components/BookDetails/BookDetails';
-import ReadBooks from './Components/ReadBooks/ReadBooks';
-import Wishlist from './Components/Wishlist/Wishlist';
+// import ReadBooks from './Components/ReadBooks/ReadBooks';
+// import Wishlist from './Components/Wishlist/Wishlist';
 
 
 const router = createBrowserRouter([
