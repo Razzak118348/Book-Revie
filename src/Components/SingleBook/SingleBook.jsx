@@ -1,6 +1,6 @@
 import { FaRegStar } from "react-icons/fa";
 import PropTypes from "prop-types";
-import BookDetails from "../BookDetails/BookDetails";
+
 import { Link } from "react-router-dom";
 
 
@@ -12,8 +12,8 @@ const SingleBook = ({ book }) => {
    
    
     return (
-  <Link to={`/SingleBook/${bookId}`}>
-        <div  className="m-0 p-0 rounded-xl border-2 ">
+  <Link to={`/SingleBook/${bookId}`} className=" border-2 border-gray-300 hover:scale-105 hover:border-opacity-30 hover:border-secondary rounded-2xl">
+        <div  className="m-0 p-0 rounded-xl ">
             <div className="hero ">
                 <div className=" flex flex-col">
                     <div className="bg-base-300 p-6 rounded-lg my-5">
