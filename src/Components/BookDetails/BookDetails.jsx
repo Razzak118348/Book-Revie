@@ -87,9 +87,9 @@ const BookDetails = () => {
                 </h1>
                 <p className="workSense_font text-lg"> By : {author}</p>
 
-                <hr className="w-full h-1  bg-black" />
+                <hr className="w-full min-h-0.5 bg-black" />
                 <p className="workSense_font text-lg">{category}</p>
-                <hr className="w-full h-1 bg-black" />
+                <hr className="w-full min-h-0.5 bg-black" />
                 <p>
                     <span className="font-bold ">Review : </span>
                     {review}
