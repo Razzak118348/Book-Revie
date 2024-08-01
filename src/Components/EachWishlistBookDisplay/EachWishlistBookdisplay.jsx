@@ -14,6 +14,8 @@ const EachWishlistBookdisplay = ({wishlist}) => {
         tags,
         publisher,
         yearOfPublishing,}=wishlist;
+
+
     return (
         <div className=" mt-10 flex flex-col md:flex-row md:justify-start  bg-base-200 w-full shadow-xl rounded-lg">
         <figure className="px-10 p-10 ">

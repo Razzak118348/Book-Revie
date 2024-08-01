@@ -1,11 +1,29 @@
-
-
+import { XAxis, YAxis, BarChart, Bar, Tooltip } from "recharts";
 const PageToRead = () => {
-    return (
-        <div>
-            <h2 className="text-4xl">This is page to read</h2>
-        </div>
-    );
+    const data = [
+        { bookName: " Great Gatsby", totalPages: 218 },
+        { bookName: "Mockingbird", totalPages: 281 },
+        { bookName: "1984", totalPages: 328 },
+        { bookName: "Pride Prejudice", totalPages: 279 },
+        { bookName: "The Catcher", totalPages: 234 },
+        { bookName: "The Hobbit", totalPages: 310 },
+        { bookName: "Moby Dick", totalPages: 635 },
+        { bookName: "War & Peace", totalPages: 1225 },
+        { bookName: "The Alchemist", totalPages: 208 },
+      ];
+      
+ 
+  return (
+    <div>
+      {/* from rechart website  */}
+      <BarChart className="my-8" width={1000} height={800} data={data}>
+        <XAxis dataKey="bookName" ></XAxis>
+        <YAxis></YAxis>
+        <Tooltip></Tooltip>
+        <Bar dataKey="totalPages" fill="#8884d8"></Bar>
+      </BarChart>
+    </div>
+  );
 };
 
 export default PageToRead;

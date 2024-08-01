@@ -3,15 +3,28 @@ import { Link } from "react-router-dom";
 import ReadBooks from "../ReadBooks/ReadBooks";
 import Wishlist from "../Wishlist/Wishlist";
 
-
+import { IoIosArrowDropdown } from "react-icons/io";
 
 const ListedBook = () => {
 const [tabIndex,setTabIndex]=useState(0)
+// const readBooks = JSON.parse(localStorage.getItem('readBooks'))  ;
 
 
     return (
         <div>
             <h2 className="text-4xl Playfair_font text-center my-5 bg-gray-200 p-5 rounded-lg">Books</h2>
+
+{/* dropdown  */}
+<div className="flex justify-center items-center">
+<details className="dropdown">
+  <summary className="btn m-1 bg-green-500">Sorted by <IoIosArrowDropdown className="h-8 w-6"></IoIosArrowDropdown></summary>
+  <ul className="menu dropdown-content bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+    <li><a>Rating</a></li>
+    <li><a>Number of Page</a></li>
+    <li><a>Publish year</a></li>
+  </ul> 
+</details>
+</div>
 
             <div className="p-2 flex justify-center md:justify-start
              my-5 rounded-lg overflow-x-auto overflow-y-hidden  flex-nowrap dark:bg-gray-100 dark:text-gray-800">

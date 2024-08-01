@@ -15,6 +15,9 @@ import Recomanded from './Components/Recomanded/Recomanded';
 import FamousWriter from './Components/FamousWriter/FamousWriter';
 import PageToRead from './Components/PageToRead/PageToRead';
 import BookDetails from './Components/BookDetails/BookDetails';
+import Fiction from './Components/Catagory/Fiction';
+import Fantasy from './Components/Catagory/Fantasy';
+import HistoricalFiction from './Components/Catagory/HistoricalFiction';
 // import ReadBooks from './Components/ReadBooks/ReadBooks';
 // import Wishlist from './Components/Wishlist/Wishlist';
 
@@ -40,14 +43,7 @@ const router = createBrowserRouter([
         path: '/listedBook',
         element: <ListedBook></ListedBook>
       },
-      // {
-      //   path:'/read',
-      //   element:<ReadBooks></ReadBooks>
-      // },
-      // {
-      //   path:'/wishlist',
-      //   element:<Wishlist></Wishlist>
-      // },
+      
       {
         path: '/PageToRead',
         element: <PageToRead></PageToRead>
@@ -56,6 +52,21 @@ const router = createBrowserRouter([
       {
         path: '/Recomanded',
         element: <Recomanded></Recomanded>
+      },
+      {
+        path:'/fiction',
+        element:<Fiction></Fiction>,
+        loader:()=>fetch(`/public/Data.json`)
+      },
+      {
+        path:'/fantasy',
+        element:<Fantasy></Fantasy>,
+        loader:()=>fetch(`/public/Data.json`)
+      },
+      {
+        path:'/historical_fantasy',
+        element:<HistoricalFiction></HistoricalFiction>,
+        loader:()=>fetch(`/public/Data.json`)
       },
 
       {

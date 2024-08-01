@@ -3,15 +3,14 @@ import EachReadBookDisplay from "../EachReadBookDisplay/EachReadBookDisplay";
 
 const ReadBooks = () => {
     const readBooks = JSON.parse(localStorage.getItem('readBooks'))  ;
-    console.log(readBooks);
-    for(const item of readBooks){
-console.log(item)
-    }
+    // console.log(readBooks);
+   
     return ( 
         <div className="mb-20">
-            This is read book 
+            
+         
             {
-                readBooks.map(readBook=><EachReadBookDisplay key={readBook.bookId} readBook={readBook}></EachReadBookDisplay>)
+readBooks?(  readBooks.map(readBook=><EachReadBookDisplay key={readBook.bookId} readBook={readBook}></EachReadBookDisplay>)):<div>There is no Read item</div>
             }
         </div>
     );
