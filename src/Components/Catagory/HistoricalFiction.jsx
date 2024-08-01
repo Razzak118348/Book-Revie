@@ -27,7 +27,7 @@ setHistoricalBooks(filterbooks);
           </div>
 
            
-          <h1 className="text-center bg-gray-300 p-2 rounded-lg text-3xl font-bold Playfair_font my-4 ">This is Fantasy section </h1>
+          <h1 className="text-center bg-gray-300 p-2 rounded-lg text-3xl font-bold Playfair_font my-4 ">This is Historical Fiction section </h1>
        {
         HistoricalBooks.map(eachbook=><EachHistorical key={eachbook.bookId} eachBook={eachbook}></EachHistorical>)
        }
