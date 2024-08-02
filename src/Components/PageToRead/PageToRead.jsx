@@ -1,4 +1,4 @@
-import { XAxis, YAxis, BarChart, Bar, Tooltip } from "recharts";
+import { XAxis, YAxis, BarChart, Bar, Tooltip, ResponsiveContainer } from "recharts";
 const PageToRead = () => {
     const data = [
         { bookName: " Great Gatsby", totalPages: 218 },
@@ -14,15 +14,17 @@ const PageToRead = () => {
       
  
   return (
-    <div>
-      {/* from rechart website  */}
-      <BarChart className="my-8" width={1000} height={800} data={data}>
-        <XAxis dataKey="bookName" ></XAxis>
-        <YAxis></YAxis>
-        <Tooltip></Tooltip>
-        <Bar dataKey="totalPages" fill="#8884d8"></Bar>
-      </BarChart>
-    </div>
+    <div className="chart-container">
+    {/* from rechart website  */}
+   <ResponsiveContainer width="100%" height={400}>
+   <BarChart className="my-8" width={1000} height={800} data={data}>
+      <XAxis dataKey="bookName" ></XAxis>
+      <YAxis></YAxis>
+      <Tooltip></Tooltip>
+      <Bar dataKey="totalPages"  fill="#8884d8"></Bar>
+    </BarChart>
+   </ResponsiveContainer>
+  </div>
   );
 };
 

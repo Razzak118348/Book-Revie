@@ -1,10 +1,10 @@
 import EachWishlistBookdisplay from "../EachWishlistBookDisplay/EachWishlistBookdisplay";
 
 const Wishlist = () => {
-  const storedWishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+  const storedWishlist = JSON.parse(localStorage.getItem("wishlist")) ;
   // console.log(storedWishlist)
   return (
-    <div>
+    <div className="my-10">
       {storedWishlist ? (
         storedWishlist.map((wishlist) => (
           <EachWishlistBookdisplay

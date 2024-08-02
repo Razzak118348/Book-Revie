@@ -34,8 +34,8 @@ const BookDetails = () => {
     const [wishlists, setWishlist] = useState([]);
 // load data  from local storage when mount the component 
     useEffect(()=>{
-        const storedReadBook = JSON.parse(localStorage.getItem('readBooks')) || [] ;
-        const storedWishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+        const storedReadBook = JSON.parse(localStorage.getItem('readBooks'));
+        const storedWishlist = JSON.parse(localStorage.getItem('wishlist')) ;
         setReadBook(storedReadBook)
         setWishlist(storedWishlist)
     },[])
