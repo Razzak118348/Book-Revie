@@ -21,6 +21,7 @@ Rajjak Book House                    <br />
                     </p>
                     <p>Providing reliable Books since 1992
                 </p>
+                <p>Copy right from authority.</p>
             </aside>
             <nav>
                 <h6 className="footer-title">Services</h6>
